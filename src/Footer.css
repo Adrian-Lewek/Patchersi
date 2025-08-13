@@ -1,0 +1,204 @@
+.site-footer {
+  background-color: #2c3e50; /* Ciemny, niebiesko-szary kolor */
+  color: #bdc3c7; /* Jasnoszary kolor tekstu dla czytelności */
+  padding: 4rem 2rem 0; /* Więcej paddingu na górze, brak na dole (doda go .footer-bottom) */
+  margin-top: 4rem; /* Odstęp od ostatniej sekcji na stronie */
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Elastyczny grid: tworzy tyle kolumn ile się zmieści, min. 280px szerokości */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem; /* Odstępy między kolumnami */
+  padding-bottom: 3rem;
+}
+
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* Subtelne podkreślenie tytułów */
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #20B2AA; /* Główny kolor akcentu */
+}
+
+.footer-column p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Kolumna z linkami */
+.links-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.links-column ul li {
+  margin-bottom: 0.75rem;
+}
+
+.links-column a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.links-column a:hover {
+  color: #ffffff;
+}
+
+/* Ikony social media */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #34495e;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #20B2AA;
+  transform: translateY(-3px);
+}
+
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  border: none;
+  padding: 0.75rem 1rem;
+  background-color: #34495e;
+  color: white;
+  outline: none;
+}
+
+.newsletter-form button {
+  border: none;
+  background-color: #20B2AA;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #1a8f88;
+}
+
+/* Przyciski CTA */
+.buy-coffee-btn ,
+.idea-btn {
+  display: inline-flex; /* Zmiana na inline-flex dla lepszego wyrównania */
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s !important; 
+  gap: 0.5rem; /* Dodajemy odstęp między tekstem a emoji */
+}
+
+/* --- NOWE, POPRAWIONE STYLE DLA PRZYCISKU KAWY --- */
+.buy-coffee-btn {
+  background-color: #20B2AA; /* Oficjalny, żywy kolor "Buy Me a Coffee" */
+  color: #000000; /* Czarny tekst dla maksymalnego kontrastu */
+  text-decoration: none;
+  color: white !important;
+  font-weight: 700; /* Mocniejsze pogrubienie */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtelny cień na start */
+}
+
+.idea-btn {
+  background: transparent;
+  border: 2px solid #20B2AA;
+  color: #20B2AA;
+  width: 100%; /* Rozciąga się na całą szerokość kolumny */
+}
+
+.buy-coffee-btn:hover,
+.idea-btn:hover {
+  transform: translateY(-3px) scale(1.03); /* Mocniejszy efekt przy najechaniu */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bardziej wyraźny cień */
+}
+
+/* Specjalny hover dla przycisku kawy */
+.buy-coffee-btn:hover {
+  background-color: #1a8f88; /* Lekko jaśniejszy żółty */
+}
+
+.idea-btn:hover {
+  background: #20B2AA;
+  color: white;
+}
+
+
+/* Dolna belka */
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #7f8c8d;
+}
+
+/* Poprawki dla mniejszych ekranów */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 3rem 1.5rem 0;
+  }
+  .footer-content {
+    gap: 2rem;
+  }
+  .footer-column {
+    text-align: center;
+  }
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .newsletter-form {
+    flex-direction: column;
+  }
+}

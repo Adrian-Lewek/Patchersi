@@ -1,0 +1,166 @@
+.apps-slider-wrapper {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  color: #222;
+}
+
+.apps-slider-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.apps-slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.slider-overflow-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.apps-slider {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.app-tile {
+  flex: 0 0 calc(20% - 1.2rem); /* 5 kafelków na widoku (100% / 5 = 20%) minus część gap */
+  box-sizing: border-box;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.app-icon-container {
+  margin-bottom: 1rem;
+}
+
+.app-icon-placeholder {
+  font-size: 3rem;
+  line-height: 1;
+  color: #20B2AA;
+}
+
+.app-tile h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.app-tile p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.slider-arrow {
+  background: #fff;
+  border: 2px solid #20B2AA;
+  color: #20B2AA;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.slider-arrow:hover:not(:disabled) {
+  background: #20B2AA;
+  color: #fff;
+}
+
+.slider-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slider-arrow.prev {
+  left: -20px;
+}
+
+.slider-arrow.next {
+  right: -20px;
+}
+
+/* --- Media Queries dla responsywności --- */
+
+/* Tablety */
+@media (max-width: 1024px) {
+  .app-tile {
+    flex: 0 0 calc(33.33% - 1rem); /* 3 kafelki */
+  }
+
+  .apps-slider-wrapper {
+    padding: 0 1rem;
+  }
+    
+  .slider-arrow.prev {
+    left: -10px;
+  }
+
+  .slider-arrow.next {
+    right: -10px;
+  }
+}
+
+/* Telefony */
+@media (max-width: 768px) {
+  .app-tile {
+    flex: 0 0 calc(50% - 0.75rem); /* 2 kafelki */
+  }
+
+  .apps-slider-wrapper h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-tile {
+    flex: 0 0 80%; /* 1 kafelek, ale nie na całą szerokość */
+  }
+
+  .apps-slider {
+    /* Wyśrodkowanie jednego kafelka */
+    justify-content: center;
+  }
+    
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+
+  .slider-arrow.prev {
+    left: 0;
+  }
+
+  .slider-arrow.next {
+    right: 0;
+  }
+}

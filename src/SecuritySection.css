@@ -1,0 +1,170 @@
+.security-section {
+  max-width: 1200px;
+  margin: 10rem auto 4rem;
+  padding: 2.5rem;
+  background: #fff; /* Białe tło dla kontrastu */
+  border-radius: 16px;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Czerwona obwódka na górze dla podkreślenia wagi */
+.security-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #D9534F; /* Czerwony kolor ostrzegawczy */
+}
+
+.security-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: #D9534F;
+}
+
+.security-header h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.security-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.highlight-red {
+  color: #D9534F;
+  font-weight: 600;
+}
+
+.warning-showcase {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start; /* Lepsze wyrównanie, gdy teksty mają różną długość */
+}
+
+.warning-visual, .warning-faq {
+  flex: 1;
+}
+
+.warning-visual h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Mockup okna aplikacji */
+.mock-window {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mock-header {
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+  font-family: monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777;
+}
+
+.mock-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.mock-app-icon {
+  font-size: 3rem;
+}
+
+.mock-app-details {
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.mock-app-details strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.mock-app-details span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.warning-banner {
+  background: #f2dede;
+  border: 1px solid #ebccd1;
+  color: #a94442;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.warning-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* FAQ po prawej */
+.warning-faq h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.warning-faq > p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+  .warning-showcase {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .security-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .security-header h2 {
+    font-size: 1.8rem;
+  }
+}

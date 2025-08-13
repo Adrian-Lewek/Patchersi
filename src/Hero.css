@@ -1,0 +1,68 @@
+.hero {
+  display: flex;
+  align-items: center;       /* wyrównanie pionowe elementów w sekcji */
+  justify-content: space-between;
+  max-width: 1200px;         /* szerokość sekcji */
+  margin: 4rem auto 0;            /* wyśrodkowanie w poziomie */
+  padding: 4rem 2rem;        /* odstęp od krawędzi */
+  gap: 2rem;
+  min-height: 25vh;          /* około środek ekranu, ale nie całość */
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.explore-btn {
+  background: #20B2AA;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.explore-btn:hover {
+  background: #1a8f88;
+  transform: scale(1.05);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right video {
+  max-width: 100%;
+  min-height: 50vh;
+  border-radius: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto; /* usuwamy wymuszanie wysokości */
+    padding: 2rem 1rem;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+}
