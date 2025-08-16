@@ -1,0 +1,294 @@
+.app-details-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.app-details-container.not-found {
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 2rem;
+}
+
+.app-icon-large img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.app-title-group h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.app-category {
+  background-color: #eef;
+  color: #557;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.app-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.app-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  border-left: 4px solid #20B2AA;
+  padding-left: 0.75rem;
+}
+.app-info p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.download-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.download-btn {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.download-btn {
+  background: #20B2AA;
+  color: white;
+}
+.download-btn:hover {
+  background: #1a8f88;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.download-btn.secondary {
+  background: #f0f2f5;
+  color: #333;
+}
+.download-btn.secondary:hover {
+  background: #e1e5e8;
+}
+.image-gallery {
+  width: 100%;
+}
+
+.main-image-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Ukrywa rogi obrazka, jeśli nie ma border-radius */
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f0f2f5; /* Tło na wypadek, gdyby obrazek się ładował */
+}
+
+.main-image {
+  width: 100%;
+  height: auto; /* Zachowuje proporcje */
+  display: block; /* Usuwa mały odstęp pod obrazkiem */
+  aspect-ratio: 16 / 9; /* Wymusza proporcje 16:9 */
+  object-fit: cover; /* Wypełnia kontener, przycinając nadmiar */
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap; /* Pozwala miniaturkom przenieść się do nowej linii */
+  gap: 1rem; /* Odstęp między miniaturkami */
+}
+
+.thumbnail {
+  width: 100px; /* Stała szerokość miniaturki */
+  height: 60px; /* Stała wysokość miniaturki */
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent; /* Przezroczysta ramka, aby uniknąć "przeskoku" */
+  transition: border-color 0.3s ease, transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.thumbnail.active {
+  border-color: #20B2AA; /* Aktywna ramka w kolorze motywu */
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(32, 178, 170, 0.5);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gwarantuje, że obrazek wypełni miniaturkę bez zniekształceń */
+}
+
+
+/* Styl dla Odznaki Zaufania */
+
+.trust-badge svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Kontener na nowe sekcje */
+.app-extended-info {
+  margin-top: 4rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 2rem;
+}
+
+.info-section {
+  margin-bottom: 3rem;
+}
+
+.info-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-section p {
+  line-height: 1.8;
+  color: #555;
+  white-space: pre-wrap; /* Zachowuje formatowanie tekstu (entety, nowe linie) */
+}
+
+/* Sekcja opinii */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-card {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.review-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.review-card p {
+  font-style: italic;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+.tags-container {
+  display: flex;
+  align-items: center; 
+  gap: 1rem;
+  margin-top: 0.75rem; 
+}
+
+/* ZMIANA TUTAJ: Dodajemy style, aby tag kategorii zachowywał się jak "pigułka" */
+.app-category {
+  /* Istniejące style */
+  background-color: #eef;
+  color: #557;
+  padding: 0.65rem 1rem; /* Lekko dopasowujemy padding, aby wysokość była identyczna z odznaką */
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  
+  /* Dodajemy, aby mieć pewność */
+  display: inline-flex;
+  align-items: center;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+
+
+/* ZMIANA: Usuwamy margines z odznaki zaufania */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* margin-top: 1rem; <-- TĘ LINIĘ NALEŻY USUNĄĆ LUB ZAKOMENTOWAĆ */
+  padding: 0.5rem 1rem;
+  background-color: #e8f5e9; /* Jasnozielone tło */
+  color: #2e7d32; /* Ciemnozielony tekst */
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+@media (max-width: 992px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-details-container {
+    padding: 1rem;
+  }
+  .app-title-group h1 {
+    font-size: 2.2rem;
+  }
+}

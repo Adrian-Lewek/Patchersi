@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "slug": "super-edytor",
+    "title": "Super Edytor",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/1200px-Android_robot.svg.png",
+    "kategoria": "Produktywność",
+    "opis_krotki": "Zaawansowany edytor tekstu z podświetlaniem składni.",
+    "opis_dlugi": "Super Edytor to rewolucyjne narzędzie dla programistów i pisarzy. Oferuje wsparcie dla ponad 50 języków programowania, wbudowany terminal, integrację z Gitem oraz rozbudowany system wtyczek",
+    "zdjecia": [
+      "https://cdn.mos.cms.futurecdn.net/PJyEybKyQhGBpM4QXw7ccH.jpg",
+      "https://www.easeus.com/images/en/screenshot/partition-manager/black-screen-of-death.png",
+      "https://4ddig.tenorshare.com/images/sd-card/green-screen.jpg?w=800&h=450"
+    ],
+    "link1": "https://example.com/download/windows",
+    "link2": "https://example.com/download/macos",
+        "isTrusted": true,
+    "geneza": "Pomysł na Super Edytor narodził się z frustracji jego twórcy, który nie mógł znaleźć lekkiego, a zarazem potężnego edytora kodu. Prace rozpoczęły się w 2022 roku jako jednoosobowy projekt, a dziś rozwija go społeczność setek programistów z całego świata, dbając o jego jakość i bezpieczeństwo.",
+    "bezpieczenstwo_info": "Kod źródłowy aplikacji jest w 100% otwarty i dostępny na platformie GitHub. Każda nowa wersja przechodzi automatyczne testy bezpieczeństwa oraz jest weryfikowana przez naszą społeczność pod kątem potencjalnych zagrożeń. Twoje dane nigdy nie opuszczają Twojego komputera.",
+    "opinie": [
+      {
+        "autor": "Anna K.",
+        "gwiazdki": 5,
+        "tresc": "Najlepszy edytor, z jakiego korzystałam! Szybki, intuicyjny i ma wszystkie funkcje, których potrzebuję."
+      },
+      {
+        "autor": "Marek Nowak",
+        "gwiazdki": 4,
+        "tresc": "Bardzo solidne narzędzie. Brakuje mi tylko jednej, małej funkcji, ale poza tym jest świetny. Polecam!"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "grafik-pro",
+    "title": "Grafik Pro",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/1200px-Android_robot.svg.png",
+    "kategoria": "Grafika",
+    "opis_krotki": "Potężne narzędzie do tworzenia grafiki wektorowej.",
+    "opis_dlugi": "Z Grafik Pro stworzysz oszałamiające ilustracje, logotypy i interfejsy. Dzięki intuicyjnemu interfejsowi i zaawansowanym funkcjom, takim jak warstwy, maski i precyzyjne narzędzia do rysowania, jest to idealny wybór zarówno dla początkujących, jak i profesjonalistów.",
+    "zdjecia": [
+      "https://cdn.mos.cms.futurecdn.net/PJyEybKyQhGBpM4QXw7ccH.jpg",
+      "https://www.easeus.com/images/en/screenshot/partition-manager/black-screen-of-death.png",
+      "https://4ddig.tenorshare.com/images/sd-card/green-screen.jpg?w=800&h=450"
+    ],
+    "link1": "https://example.com/download/grafik/windows",
+    "link2": "https://example.com/download/grafik/linux",
+        "isTrusted": true,
+    "geneza": "Pomysł na Super Edytor narodził się z frustracji jego twórcy, który nie mógł znaleźć lekkiego, a zarazem potężnego edytora kodu. Prace rozpoczęły się w 2022 roku jako jednoosobowy projekt, a dziś rozwija go społeczność setek programistów z całego świata, dbając o jego jakość i bezpieczeństwo.",
+    "bezpieczenstwo_info": "Kod źródłowy aplikacji jest w 100% otwarty i dostępny na platformie GitHub. Każda nowa wersja przechodzi automatyczne testy bezpieczeństwa oraz jest weryfikowana przez naszą społeczność pod kątem potencjalnych zagrożeń. Twoje dane nigdy nie opuszczają Twojego komputera.",
+    "opinie": [
+      {
+        "autor": "Anna K.",
+        "gwiazdki": 5,
+        "tresc": "Najlepszy edytor, z jakiego korzystałam! Szybki, intuicyjny i ma wszystkie funkcje, których potrzebuję."
+      },
+      {
+        "autor": "Marek Nowak",
+        "gwiazdki": 4,
+        "tresc": "Bardzo solidne narzędzie. Brakuje mi tylko jednej, małej funkcji, ale poza tym jest świetny. Polecam!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "szybki-player",
+    "title": "Szybki Player",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/1200px-Android_robot.svg.png",
+    "kategoria": "Multimedia",
+    "opis_krotki": "Lekki i szybki odtwarzacz wideo obsługujący 4K.",
+    "opis_dlugi": "Zapomnij o zacinających się filmach. Szybki Player jest zoptymalizowany pod kątem wydajności i obsługuje wszystkie popularne formaty wideo, w tym materiały w rozdzielczości 4K i 8K. Posiada minimalistyczny interfejs i obsługę napisów.",
+    "zdjecia": [
+      "https://cdn.mos.cms.futurecdn.net/PJyEybKyQhGBpM4QXw7ccH.jpg",
+      "https://www.easeus.com/images/en/screenshot/partition-manager/black-screen-of-death.png",
+      "https://4ddig.tenorshare.com/images/sd-card/green-screen.jpg?w=800&h=450"
+    ],
+    "link1": "https://example.com/download/player",
+        "isTrusted": true,
+    "geneza": "Pomysł na Super Edytor narodził się z frustracji jego twórcy, który nie mógł znaleźć lekkiego, a zarazem potężnego edytora kodu. Prace rozpoczęły się w 2022 roku jako jednoosobowy projekt, a dziś rozwija go społeczność setek programistów z całego świata, dbając o jego jakość i bezpieczeństwo.",
+    "bezpieczenstwo_info": "Kod źródłowy aplikacji jest w 100% otwarty i dostępny na platformie GitHub. Każda nowa wersja przechodzi automatyczne testy bezpieczeństwa oraz jest weryfikowana przez naszą społeczność pod kątem potencjalnych zagrożeń. Twoje dane nigdy nie opuszczają Twojego komputera.",
+    "opinie": [
+      {
+        "autor": "Anna K.",
+        "gwiazdki": 5,
+        "tresc": "Najlepszy edytor, z jakiego korzystałam! Szybki, intuicyjny i ma wszystkie funkcje, których potrzebuję."
+      },
+      {
+        "autor": "Marek Nowak",
+        "gwiazdki": 4,
+        "tresc": "Bardzo solidne narzędzie. Brakuje mi tylko jednej, małej funkcji, ale poza tym jest świetny. Polecam!"
+      }
+    ]
+  }
+]

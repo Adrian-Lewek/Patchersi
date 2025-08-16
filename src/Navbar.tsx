@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css'; // Upewnij się, że importujesz właściwy plik CSS
-
+import { Link } from 'react-router-dom';
 // Prosta ikona wyszukiwania (można zastąpić ikoną z biblioteki)
 const SearchIcon = () => (
   <svg
@@ -52,10 +52,10 @@ const Navbar: React.FC = () => {
 
         {/* Linki na desktop */}
         <div className="nav-links">
-          <a href="#">Strona Główna</a>
-          <a href="#">Wszystkie programy</a> {/* Nowy link */}
-          <a href="#">O nas</a>
-          <a href="#">Kontakt</a>
+          <Link to="/">Strona Główna</Link>
+          <Link to="/apps">Wszystkie programy</Link>
+          <Link to="/about">O nas</Link>
+          <Link to="/contact">Kontakt</Link>
         </div>
 
         {/* Wyszukiwarka */}
@@ -76,10 +76,10 @@ const Navbar: React.FC = () => {
 
       {/* Menu mobilne */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#">Strona Główna</a>
-          <a href="#">Wszystkie programy</a>
-          <a href="#">O nas</a>
-          <a href="#">Kontakt</a>
+          <Link to="/">Strona Główna</Link>
+          <Link to="/apps">Wszystkie programy</Link>
+          <Link to="/about">O nas</Link>
+          <Link to="/contact">Kontakt</Link>
       </div>
     </nav>
   );

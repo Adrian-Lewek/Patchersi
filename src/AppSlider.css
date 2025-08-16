@@ -30,7 +30,13 @@
 }
 
 .app-tile {
-  flex: 0 0 calc(20% - 1.2rem); /* 5 kafelków na widoku (100% / 5 = 20%) minus część gap */
+  /* Kluczowe zmiany tutaj */
+  display: flex; /* Ustawiamy flexbox wewnątrz kafelka */
+  flex-direction: column; /* Układamy elementy (ikona, tytuł, opis) w kolumnie */
+  width: 100%; /* Kafelek ma zajmować 100% szerokości linku */
+  height: 100%; /* Kafelek rozciąga się na 100% wysokości linku */
+  
+  /* Reszta stylów bez zmian */
   box-sizing: border-box;
   background: #f9f9f9;
   border-radius: 12px;
@@ -39,14 +45,23 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .app-tile:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .app-icon-container {
+  /* Nadajemy kontenerowi stałą wysokość i centrujemy zawartość */
+  height: 120px; /* Możesz dostosować tę wartość */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
+}
+.app-icon {
+  max-width: 100%;
+  max-height: 100%; /* Ikona nie będzie wyższa niż jej kontener */
+  object-fit: contain; /* Kluczowa właściwość! Skaluje obraz, zachowując proporcje */
 }
 
 .app-icon-placeholder {
@@ -107,7 +122,12 @@
 .slider-arrow.next {
   right: -20px;
 }
-
+.app-tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex; /* Zmieniamy na flex, aby kafelek w środku mógł się rozciągnąć */
+  flex: 0 0 calc(20% - 1.2rem);
+}
 /* --- Media Queries dla responsywności --- */
 
 /* Tablety */
