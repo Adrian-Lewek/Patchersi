@@ -3,10 +3,14 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom'; // <-- Import
 import App from './App.tsx';
 
+import { SearchProvider } from './context/SearchContext'; 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/Patchersi/"> {/* <-- Opakowujemy App w router */}
-      <App />
+    <BrowserRouter basename="/patchersi">
+      <SearchProvider> {/* <-- Opakowujemy App w nasz provider */}
+        <App />
+      </SearchProvider>
     </BrowserRouter>
   </StrictMode>,
 );

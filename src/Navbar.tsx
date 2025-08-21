@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './navbar.css'; // Upewnij się, że importujesz właściwy plik CSS
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // Prosta ikona wyszukiwania (można zastąpić ikoną z biblioteki)
+import { SearchContext } from './context/SearchContext';
 const SearchIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +23,8 @@ const SearchIcon = () => (
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { searchTerm, setSearchTerm } = useContext(SearchContext);
+  const navigate = useNavigate();
 
   // Efekt do obsługi scrollowania
   useEffect(() => {
@@ -43,12 +46,20 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value); // Aktualizuj globalny stan
+
+    // Jeśli użytkownik zaczął pisać, przenieś go na stronę z aplikacjami
+    if (value.length > 0) {
+      navigate('/apps');
+    }
+  };
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-content">
-        <a href="/" className="logo">
-          Patchers.com
-        </a>
+        <Link to="/" className="logo">Patchersi</Link>
+
 
         {/* Linki na desktop */}
         <div className="nav-links">
@@ -60,8 +71,13 @@ const Navbar: React.FC = () => {
 
         {/* Wyszukiwarka */}
         <div className="search-container">
-          <input type="text" placeholder="Szukaj aplikacji..." />
-          <button className="search-btn">
+          <input 
+            type="text" 
+            placeholder="Szukaj aplikacji..."
+            value={searchTerm} // Pole jest kontrolowane przez stan z kontekstu
+            onChange={handleSearchChange}
+          />
+          <button className="search-btn" onClick={() => navigate('/apps')}>
             <SearchIcon />
           </button>
         </div>

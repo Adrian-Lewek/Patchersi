@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 // Placeholder dla ikon. W przyszłości możesz użyć biblioteki jak 'react-icons'
 // np. import { FaReddit, FaLinkedin, FaFacebook } from 'react-icons/fa';
@@ -31,9 +32,9 @@ const Footer: React.FC = () => {
         <div className="footer-column links-column">
           <h4>Nawigacja</h4>
           <ul>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Regulamin</a></li>
-            <li><a href="#">Polityka Prywatności</a></li>
+            <li><Link to="/contact">Kontakt</Link></li>
+            <li><Link to="/regulamin">Regulamin</Link></li>
+            <li><Link to="/polityka-prywatnosci">Polityka Prywatności</Link></li>
           </ul>
           <a href="#" className="buy-coffee-btn">
             Buy me a Coffee ☕
